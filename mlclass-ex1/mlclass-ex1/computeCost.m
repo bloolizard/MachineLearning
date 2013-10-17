@@ -13,7 +13,10 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-printf('awe some');
+
+h = theta' * X'; % compute hypothesis
+
+J = 1 / (2 * m) * sum((h'-y).^2) % cost function
 
 
 
