@@ -26,6 +26,16 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+% need to return X_norm, mu, sigma
+
+n = ndims(X); % number of features is the columns count of X
+
+mu = mean(X);
+sigma = std(X);
+
+for i = 1:length(X),
+	X_norm(i,:) = ( X(i,:).-mu ) ./ sigma;
+end 
 
 
 
