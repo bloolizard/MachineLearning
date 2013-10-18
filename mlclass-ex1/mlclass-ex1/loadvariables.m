@@ -18,7 +18,8 @@ m = length(y); % number of training examples
 X = [ones(m, 1), data(:,1)]; % Add a column of ones to x
 theta = zeros(2, 1); % initialize fitting parameters
 iterations = 1500;
+num_iters = iterations;
 alpha = 0.01;
-
+J_history = zeros(num_iters, 1);
 fprintf('Loading variables completed\n');
 
