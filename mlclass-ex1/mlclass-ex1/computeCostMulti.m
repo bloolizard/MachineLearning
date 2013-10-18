@@ -14,6 +14,8 @@ J = 0;
 %               You should set J to the cost.
 
 
+h = theta' * X'; % compute hypothesis
+J = 1 / (2 * m) * sum((h'-y).^2) % cost function
 
 
 
