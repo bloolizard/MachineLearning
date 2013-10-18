@@ -17,8 +17,16 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
+    % Correct: Simultaneuous update
+    % temp0 = theta(0)-alpha d/d(theta0)J[theta(0),theta(1)]
+    % temp1 = theta(1)-alpha d/d(theta1)J[theta(0),theta(1)]
+    % theta0 = temp0
+    % theta1 = temp1
 
-
+    h = theta' * X';
+    temp0 = 1/m * sum(h'-y);
+    temp1 = 1/m * sum((h'-y).*X(:,2));
+    
 
 
 
