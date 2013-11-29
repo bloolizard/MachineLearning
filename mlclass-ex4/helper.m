@@ -4,6 +4,7 @@ clear all
 fprintf("Starting Helper Function\n");
 fprintf("---\n\n");
 
+
 %% Setup the parameters you will use for this exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
 hidden_layer_size = 25;   % 25 hidden units
@@ -22,6 +23,11 @@ nn_params = [Theta1(:) ; Theta2(:)];
 % Weight regularization parameter (we set this to 0 here).
 lambda = 0;
 lambda = 1;
+
+ %calculating the grad
+Theta1_grad = zeros(size(Theta1));
+Theta2_grad = zeros(size(Theta2));
+
 
 J = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, num_labels, X, y, lambda)
 

@@ -94,6 +94,32 @@ temp2 = temp2.^2;
 J = J + lambda/(2*m)*(sum(sum(temp1'))+ sum(sum(temp2'))) ;
 
 % starting backpropagation
+fprintf("Starting Backpropagation...\n");
+Delta_2 = 0;
+Delta_1 = 0;
+%output layer, layer 3
+d_3 = a_3 - ry;
+
+%hidden layer l = 2
+d_2 = (d_3 * Theta2)(:,2:end) .* sigmoidGradient(z_2);
+
+Delta_2 = Delta_2 + d_3'*a_2;
+Delta_1 = Delta_1 + d_2'*a_1;
+
+
+Theta2_grad = (1/m)* Delta_2;
+Theta1_grad = (1/m)* Delta_1;
+
+%starting regularization
+temp2_grad = Theta2_grad;
+temp2_grad += (lambda/m)*Theta2;
+temp2_grad(:,1) = Theta2_grad(:,1);
+Theta2_grad = temp2_grad;
+
+temp1_grad = Theta1_grad;
+temp1_grad += (lambda/m)*Theta1;
+temp1_grad(:,1) = Theta1_grad(:,1);
+Theta1_grad = temp1_grad;
 
 
 
