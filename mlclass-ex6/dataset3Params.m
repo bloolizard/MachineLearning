@@ -24,8 +24,9 @@ sigma = 0.3;
 %
 
 
-
-
+% confused on this part...
+C = 1;
+sigma = 0.1;
 
 
 
