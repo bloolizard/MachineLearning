@@ -6,6 +6,7 @@
 
 All of the *problem sets* for the Coursera Online course worked on in Fall 2013.
 
+<pre>
 Linear Regression with Multiple Variables (Week 2)
 Regularization (Week 3)
 Neural Networks: Representation (Week 4)
@@ -14,3 +15,4 @@ Advice for Applying Machine Learning (Week 6)
 Support Vector Machines (Week 7)
 Dimensionality Reduction (Week 8)
 Recommender Systems (Week 9)
+</pre>
